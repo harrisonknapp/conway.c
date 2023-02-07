@@ -1,12 +1,22 @@
 #include <stdio.h> //Duh
 #include <time.h> //To randomize seed
 #include <stdlib.h> //To randomize
+#include <string.h> //Needed as long as I prompt for repeat with string
 
 int gameBoard[10][10];
 int nextgameBoard[10][10];
 int iterationsCompleted  = 0;
 
-void iterate() {}
+void iterate() {
+   //First we update the board
+   for (int i = 0; i < 10; ++i) {
+      for (int j = 0; j < 10; ++j) {
+         int neighbors = 0;
+         if (0) {}//Come back here to work with first neighbor
+      }
+   }
+
+}
 
 int repeatPrompt(int iterationNum) {
    char repeatResponse[50];
@@ -33,7 +43,7 @@ int generateBoard(void) {
       //FIXME: Need a fix here so other types of input don't hang up
    }
    
-   for (int i = 0; i < startNum; ++i) { //Clear the board
+   for (int i = 0; i < 10; ++i) { //Clear the board
       for (int j = 0; j < startNum; ++j) {
          gameBoard[i][j] = 0;
       }
